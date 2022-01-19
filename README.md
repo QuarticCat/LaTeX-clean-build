@@ -79,3 +79,5 @@ It is easy to work with [LaTeX Workshop](https://github.com/James-Yu/LaTeX-Works
 ```
 
 And of course you should make sure `build-latex.zsh` is in the PATH exported to VS Code, otherwise you should write the full path in `command` field.
+
+What if you want to delete outdated temporary directories automatically? Try tmpfs or systemd-tmpfiles.
