@@ -1,6 +1,6 @@
 # LaTeX Clean Build
 
-When building latex documents, there will be a lot of temporary files like `*.aux`, `*.log`, `*.toc`, etc. Apart from these commonly seen files, many packages will create their own temporary files for caching or other purposes. For example, `minted` will create a directory starts with `_minted-`, and `tikz` with `\tikzexternalize` will create PDF files for each graph. Then what if you don't want to see them?
+When building LaTeX documents, there will be a lot of temporary files like `*.aux`, `*.log`, `*.toc`, etc. Apart from these commonly seen files, many packages will create their own temporary files for caching or other purposes. For example, `minted` will create a directory starts with `_minted-`, and `tikz` with `\tikzexternalize` will create PDF files for each graph. Then what if you don't want to see them?
 
 Usually we cannot simply delete temporary files by some regular expression rules. Since that will probably slow down the next build, and these rules are hard to share between different documents.
 
@@ -15,7 +15,7 @@ Here I provide another way to do a LaTeX clean build, which might meet your need
 1. Set the working directory to this directory, and the build the document in the original directory. This step is to make sure all temporary files are created in temporary directory while keep the path in `*.syntex.gz` pointing to original TeX files so that SyncTeX can work as expected.
 1. Copy needed files back to the original directory. And also, you can create links.
 
-This script is just an example. Please feel free to modify it or write your own one. The important thing in this repo is the idea.
+The advantage of this method is that it can both keep caches stayed and keep your directory clean, without sacrifice of compatibility (AFAIK). This script is just an implementation example. Please feel free to modify it or write your own one. The important thing in this repo is the idea.
 
 ## Usage
 
