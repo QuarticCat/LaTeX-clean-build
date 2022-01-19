@@ -29,6 +29,8 @@ E.g.
 $ ./build-latex.zsh 'xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape' 'Report'
 ```
 
+Note that the working directory should be the same as you use the `<latex-engine-command>` to build.
+
 It is easy to work with [LaTeX Workshop](https://github.com/James-Yu/LaTeX-Workshop). Here is a config example:
 
 ```json
